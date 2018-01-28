@@ -1,0 +1,16 @@
+
+packages = [
+    'firewalld',
+    'fish',
+    'tmux',
+    'mosh',
+    'glibc-langpack-en.x86_64'
+]
+
+[users.jelford]
+groups = ['wheel']
+key_file = "~/.ssh/id_ed25519.pub"
+
+[files.sshd_config]
+local = 'remote_files/sshd_config'
+remote = '/etc/ssh/sshd_config'
